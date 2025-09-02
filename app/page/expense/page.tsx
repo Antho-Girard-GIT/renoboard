@@ -97,7 +97,7 @@ const DepensesPage = () => {
   <div className="flex items-center justify-center bg-gradient-to-br from-background via-gray-100 to-gray-200 dark:from-background dark:via-gray-900 dark:to-gray-950 rounded-2xl mx-10 my-5">
         <Card className="w-full shadow-xl border-none bg-white/90 dark:bg-gray-900/80">
         <CardHeader>
-          <CardTitle className="text-3xl font-bold text-center tracking-tight">Dépenses<br></br>Total : {Math.round(depenses.reduce((sum, depense) => sum + Number(depense.montant), 0) * 100) / 100} $</CardTitle>
+          <CardTitle className="text-3xl text-center tracking-tight">Dépenses<br></br>Total : {Math.round(depenses.reduce((sum, depense) => sum + Number(depense.montant), 0) * 100) / 100} $</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleCreateDepense} className="flex flex-col md:flex-row gap-2 w-full items-end mb-6">

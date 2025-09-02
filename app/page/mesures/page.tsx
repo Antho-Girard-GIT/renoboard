@@ -93,7 +93,7 @@ const MesuresPage = () => {
   return (
     <div className="flex items-center justify-center bg-gradient-to-br from-background via-gray-100 to-gray-200 dark:from-background dark:via-gray-900 dark:to-gray-950 rounded-2xl mx-10 my-5">
       <Card className="w-full shadow-xl border-none bg-white/90 dark:bg-gray-900/80">
-        <CardTitle className="text-center text-2xl font-bold p-4">
+        <CardTitle className="text-center text-2xl p-4">
           Gestion des mesures
         </CardTitle>
         <CardContent>
@@ -148,9 +148,9 @@ const MesuresPage = () => {
               <table className="min-w-full text-sm">
                 <thead className="bg-gray-100 dark:bg-gray-800">
                   <tr>
-                    <th className="px-4 py-2 font-semibold text-left">Pièce</th>
+                    <th className="px-4 py-2 font-semibold text-left">Pièces</th>
                     <th className="px-4 py-2 font-semibold text-left">
-                      Dimension</th>
+                      Dimensions</th>
                     <th className="px-4 py-2 font-semibold text-left">Supprimer</th>
                   </tr>
                 </thead>

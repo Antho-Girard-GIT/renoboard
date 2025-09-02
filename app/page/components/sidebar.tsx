@@ -51,7 +51,7 @@ export default function SideBar() {
     <Sidebar className="sticky top-8 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 rounded-2xl">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel className="font-inconsolata">Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -59,7 +59,7 @@ export default function SideBar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span className="font-luckiest-guy">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

@@ -1,7 +1,7 @@
 import React from "react";
 import { ModeToggle } from "./theme-toggle";
 import Image from "next/image";
-import LogoRB from "@/public/LogoRb2.png";
+import LogoRB from "@/public/RBlogo.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,12 +22,12 @@ export default function Nav() {
       <div className="flex items-center gap-5">
         <Link href="/">
           <Image
-            className="w-18 border rounded-full border-blue-200 bg-black"
+            className="w-18 rounded-full"
             src={LogoRB}
             alt="Logo Renoboard"
           />
         </Link>
-        <h1 className="text-2xl uppercase font-bold">RenoBoard</h1>
+        <h1 className="text-2xl uppercase font-luckiest-guy">RenoBoard</h1>
       </div>
       <div className="flex gap-4">
         <AuthButton />
@@ -56,12 +56,12 @@ export const AuthButton = async () => {
           </p>
         </span>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="flex flex-col gap-2">
+      <DropdownMenuContent className="flex flex-col w-full justify-between items-stretch gap-2 mx-auto">
         <DropdownMenuItem asChild>
-          <Button variant="outline" className="mx-2">
+          <Button variant="outline" className="mx-2 mb-1 flex justify-center">
             <Link
               href="/page/dashboard"
-              className="flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-2  w-full"
             >
               <LayoutDashboardIcon />
               <span>Tableau de bord</span>
@@ -69,20 +69,21 @@ export const AuthButton = async () => {
           </Button>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Button variant="outline" className="mx-2">
+          <Button variant="outline" className="mx-2 flex justify-center">
             <Link
               href="/auth"
-              className="flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-2 w-full"
             >
               <User />
               <span>Profil</span>
             </Link>
           </Button>
         </DropdownMenuItem>
-        <DropdownMenuItem className="flex justify-center">
-          <form>
+        <DropdownMenuItem asChild>
+          <form className="w-full flex flex-1 m-0 p-0">
             <Button
               variant="outline"
+              className="w-full flex flex-1 justify-center"
               formAction={async () => {
                 "use server";
                 await auth.api.signOut({

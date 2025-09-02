@@ -93,7 +93,7 @@ const AchatsPage = () => {
   return (
     <div className="flex items-center justify-center bg-gradient-to-br from-background via-gray-100 to-gray-200 dark:from-background dark:via-gray-900 dark:to-gray-950 rounded-2xl mx-10 my-5">
       <Card className="w-full shadow-xl border-none bg-white/90 dark:bg-gray-900/80">
-        <CardTitle className="text-center text-2xl font-bold p-4">
+        <CardTitle className="text-center text-2xl p-4">
           Gestion des achats
         </CardTitle>
         <CardContent>
@@ -106,13 +106,13 @@ const AchatsPage = () => {
                 htmlFor="nom"
                 className="text-xs font-medium text-muted-foreground"
               >
-                Nom
+                Achat
               </label>
               <Input
                 type="text"
                 name="nom"
                 id="nom"
-                placeholder="Nom"
+                placeholder="Achat"
                 autoComplete="off"
               />
             </div>
@@ -148,7 +148,7 @@ const AchatsPage = () => {
               <table className="min-w-full text-sm">
                 <thead className="bg-gray-100 dark:bg-gray-800">
                   <tr>
-                    <th className="px-4 py-2 font-semibold text-left">Nom</th>
+                    <th className="px-4 py-2 font-semibold text-left">Achats</th>
                     <th className="px-4 py-2 font-semibold text-left">
                       Description</th>
                     <th className="px-4 py-2 font-semibold text-left">Supprimer</th>
