@@ -39,9 +39,23 @@ const DepensesPage = () => {
       });
   }, [isClient]);
 
-  const handleDeleteDepense = (id: string) => {
+  const handleDeleteDepense = async (id: string) => {
+  setLoading(true);
+  setError(null);
+  try {
+    const res = await fetch('/api/expense', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    });
+    if (!res.ok) throw new Error('Erreur lors de la suppression');
     setDepenses(depenses.filter((depense) => depense.id !== id));
-  };
+  } catch {
+    setError('Erreur lors de la suppression de la dépense.');
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleCreateDepense = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -40,3 +40,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: String(error) }, { status: 500 });
   }
 }
+
+export async function DELETE(req: NextRequest) {
+  try {
+    const session = await getSession();
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Non autorisé' }, { status: 401 });
+    }
+    const { id } = await req.json();
+    await prisma.depense.delete({
+      where: {
+        id,
+        userId: session.user.id,
+      },
+    });
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error('Erreur suppression dépense:', error);
+    return NextResponse.json({ error: String(error) }, { status: 500 });
+  }
+}
