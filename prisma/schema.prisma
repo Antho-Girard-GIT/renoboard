@@ -91,16 +91,18 @@ model Mesure {
   nom      String
   valeur   Decimal
   unite    String
+  userId   String
 
   @@unique([nom])
 }
 
-model Tache {
+model tache {
   id       String   @id @default(cuid())
   nom      String
   description String
   date     DateTime @default(now())
   etat     String @default("en cours")
+  userId   String
 
   @@unique([nom, date])
 }
