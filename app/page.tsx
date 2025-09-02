@@ -11,9 +11,8 @@ export default function Home() {
       <h1 className="text-4xl md:text-6xl uppercase font-black mb-3 text-white drop-shadow-lg text-center">Bienvenue sur Renoboard</h1>
       {/* À propos */}
       <p className="text-xl md:text-2xl text-center px-4 md:px-32 font-bold text-gray-200 mb-6">
-        Simplifiez la gestion de vos projets de rénovation ou de construction grâce à une plateforme tout-en-un : suivez votre budget, vos tâches, vos achats et les mesures de vos pièces en toute simplicité.
+        Simplifiez la gestion de vos projets de rénovation ou de construction grâce à une plateforme tout-en-une : suivez votre budget, vos tâches, vos achats et les mesures de vos pièces en toute simplicité.
       </p>
-      {/* Section fonctionnalités */}
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 overflow-hidden rounded-2xl px-5">
         {/* Dashboard */}
         <div className="bg-blue-950/80 rounded-xl p-6 shadow-lg border-2 border-blue-800 flex flex-col items-center transition-colors duration-200 hover:bg-blue-900/90">

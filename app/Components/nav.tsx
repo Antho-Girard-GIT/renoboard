@@ -19,7 +19,7 @@ import { headers } from "next/headers";
 export default function Nav() {
   return (
     <nav className="m-5 lg:mx-15 h-[80px] flex items-center justify-between rounded-2xl px-5 border-4 border-gray-950/40 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 shadow-2xl">
-      <div>
+      <div className="flex items-center gap-5">
         <Link href="/">
           <Image
             className="w-18 border rounded-full border-blue-200 bg-black"
@@ -27,6 +27,7 @@ export default function Nav() {
             alt="Logo Renoboard"
           />
         </Link>
+        <h1 className="text-2xl uppercase font-bold">RenoBoard</h1>
       </div>
       <div className="flex gap-4">
         <AuthButton />
@@ -63,7 +64,7 @@ export const AuthButton = async () => {
               className="flex items-center justify-center gap-2"
             >
               <LayoutDashboardIcon />
-              <span>Dashboard</span>
+              <span>Tableau de bord</span>
             </Link>
           </Button>
         </DropdownMenuItem>
@@ -91,7 +92,7 @@ export const AuthButton = async () => {
               }}
             >
               <LogOut />
-              Logout
+              Déconnexion
             </Button>
           </form>
         </DropdownMenuItem>
