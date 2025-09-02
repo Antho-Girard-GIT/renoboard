@@ -84,10 +84,9 @@ model depense {
   userId   String
 }
 
-model Mesure {
-  id       String   @id
+model mesure {
+  id       String   @id @default(cuid())
   nom      String
-  valeur   Decimal
   unite    String
   userId   String
 
