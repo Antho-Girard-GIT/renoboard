@@ -186,7 +186,7 @@ const TachesPage = () => {
                         className="even:bg-gray-50 dark:even:bg-gray-800/40"
                       >
                         <td className="px-4 py-2">{Tache.nom}</td>
-                        <td className="px-4 py-2">{Tache.description} $</td>
+                        <td className="px-4 py-2">{Tache.description}</td>
                         <td className="px-4 py-2">
                           {Tache.date
                             ? new Date(Tache.date).toLocaleDateString("fr-FR", {

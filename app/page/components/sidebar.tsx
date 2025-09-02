@@ -34,12 +34,12 @@ const items = [
     icon: SquareCheckBig,
   },
   {
-    title: "Achat",
+    title: "Achats",
     url: "/page/buy",
     icon: ScanBarcode,
   },
   {
-    title: "Parametres",
+    title: "Paramètres",
     url: "/auth",
     icon: Settings,
   }
