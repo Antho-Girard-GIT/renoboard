@@ -14,7 +14,7 @@ export default function DashboardPage() {
       try {
         const response = await fetch("/api/expense");
         const data = await response.json();
-        const total = data.reduce((sum: number, expense: { montant: number }) => sum + expense.montant, 0);
+        const total = data.reduce((sum: number, expense: { montant: number }) => sum + Number(expense.montant), 0);
         setTotalDepenses(total);
       } catch (error) {
         console.error("Erreur lors de la récupération des dépenses:", error);

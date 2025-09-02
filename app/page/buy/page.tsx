@@ -25,7 +25,7 @@ const AchatsPage = () => {
   useEffect(() => {
     if (!isClient) return;
     setLoading(true);
-    fetch("/api/todo")
+    fetch("/api/buy")
       .then((res) => res.json())
       .then((data) => {
         setAchats(data);
