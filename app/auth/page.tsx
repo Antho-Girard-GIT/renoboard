@@ -13,16 +13,16 @@ export default async function AuthPage() {
     <div className="mx-20 md:mx-40">
     <Card>
         <CardHeader>
-          <CardTitle>Profil utilisateur</CardTitle>
+          <CardTitle>Profil d&apos;utilisateur</CardTitle>
         </CardHeader>
         <CardContent>
         <div className="grid gap-4">
           <div className="flex flex-col">
-            <span className="text-sm text-muted-foreground">Nom</span>
+            <span className="text-sm text-muted-foreground">Nom d&apos;utilisateur</span>
             <span>{user.name}</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-sm text-muted-foreground">Email</span>
+            <span className="text-sm text-muted-foreground">Courriel</span>
             <span>{user.email}</span>
           </div>
         </div>

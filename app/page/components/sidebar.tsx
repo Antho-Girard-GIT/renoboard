@@ -14,7 +14,7 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Dashboard",
+    title: "Tableau de bord",
     url: "/page/dashboard",
     icon: CircleGauge,
   },
