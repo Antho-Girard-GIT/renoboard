@@ -69,13 +69,11 @@ model Verification {
   @@map("verification")
 }
 
-model Achat {
+model achat {
   id       String   @id @default(cuid())
   nom      String
-  prix     Decimal
-  date     DateTime @default(now())
-
-  @@unique([nom, date])
+  description String
+  userId  String
 }
 
 model depense {
